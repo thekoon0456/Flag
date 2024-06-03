@@ -14,6 +14,26 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Button {
+                print("aa")
+            } label: {
+                Image(.startEmail)
+            }
+            
+            HStack {
+                Button {
+                    
+                } label: {
+                    Image(.cancelMedium)
+                }
+                
+                Button {
+                    
+                } label: {
+                    Image(.okMedium)
+                }
+            }
+
         }
         .padding()
     }
