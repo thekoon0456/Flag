@@ -19,6 +19,10 @@
 		7C0ACC682C0DEBB800A85C6B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ACC672C0DEBB800A85C6B /* .gitignore */; };
 		7C0ACC6A2C0DEBC500A85C6B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC692C0DEBC500A85C6B /* APIKey.swift */; };
 		7C0ACC6D2C0DF6F200A85C6B /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC6C2C0DF6F200A85C6B /* NavigationLazyView.swift */; };
+		7C0ACC702C0DF82200A85C6B /* NavigationBarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC6F2C0DF82200A85C6B /* NavigationBarWrapper.swift */; };
+		7C0ACC722C0DF83900A85C6B /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC712C0DF83900A85C6B /* ButtonWrapper.swift */; };
+		7C0ACC742C0DF85200A85C6B /* ForegroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */; };
+		7C0ACC762C0DF86D00A85C6B /* BackgroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		7C0ACC692C0DEBC500A85C6B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		7C0ACC6B2C0DF68C00A85C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7C0ACC6C2C0DF6F200A85C6B /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		7C0ACC6F2C0DF82200A85C6B /* NavigationBarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWrapper.swift; sourceTree = "<group>"; };
+		7C0ACC712C0DF83900A85C6B /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
+		7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundWrapper.swift; sourceTree = "<group>"; };
+		7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 				7C0ACC592C0DEA4600A85C6B /* Data */,
 				7C0ACC5A2C0DEA4900A85C6B /* Domain */,
 				7C0ACC5B2C0DEA4D00A85C6B /* Presenter */,
+				7C0ACC6E2C0DF81100A85C6B /* ViewModifier */,
+				7C0ACC772C0DF8E800A85C6B /* CommonUI */,
 				7C0ACC602C0DEA8D00A85C6B /* Utility */,
 				7C0ACC582C0DEA3B00A85C6B /* Protocol */,
 				7C0ACC572C0DEA3400A85C6B /* Extension */,
@@ -181,9 +191,27 @@
 		7C0ACC602C0DEA8D00A85C6B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACC6C2C0DF6F200A85C6B /* NavigationLazyView.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		7C0ACC6E2C0DF81100A85C6B /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */,
+				7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */,
+				7C0ACC712C0DF83900A85C6B /* ButtonWrapper.swift */,
+				7C0ACC6F2C0DF82200A85C6B /* NavigationBarWrapper.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		7C0ACC772C0DF8E800A85C6B /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ACC6C2C0DF6F200A85C6B /* NavigationLazyView.swift */,
+			);
+			path = CommonUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +296,14 @@
 			files = (
 				7C0ACC642C0DEB1F00A85C6B /* Router.swift in Sources */,
 				7C0ACC422C0DD84900A85C6B /* ContentView.swift in Sources */,
+				7C0ACC742C0DF85200A85C6B /* ForegroundWrapper.swift in Sources */,
+				7C0ACC702C0DF82200A85C6B /* NavigationBarWrapper.swift in Sources */,
+				7C0ACC722C0DF83900A85C6B /* ButtonWrapper.swift in Sources */,
 				7C0ACC6D2C0DF6F200A85C6B /* NavigationLazyView.swift in Sources */,
 				7C0ACC622C0DEB1800A85C6B /* APIService.swift in Sources */,
 				7C0ACC402C0DD84900A85C6B /* FlagApp.swift in Sources */,
 				7C0ACC6A2C0DEBC500A85C6B /* APIKey.swift in Sources */,
+				7C0ACC762C0DF86D00A85C6B /* BackgroundWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
