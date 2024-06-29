@@ -9,13 +9,14 @@ import ComposableArchitecture
 
 @Reducer
 struct CounterFeature {
-    struct State {
+    struct State: Equatable {
         var count = 0
     }
     
     enum Action {
         case decrementButtonTapped
         case incrementButtonTapped
+        case resetButtonTapped
     }
     
     var body: some ReducerOf<Self> {
@@ -27,13 +28,10 @@ struct CounterFeature {
             case .incrementButtonTapped:
                 state.count += 1
                 return .none
+            case .resetButtonTapped:
+                state.count = 0
+                return .none
             }
         }
     }
-
 }
-
-
-
-
-
