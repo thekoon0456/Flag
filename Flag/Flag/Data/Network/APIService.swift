@@ -10,9 +10,9 @@ import Foundation
 import CombineMoya
 import Moya
 
-final class APIService {
-    
-    provider = MoyaProvider<>()
-    
-    
-}
+//final class APIService {
+//    
+//    provider = MoyaProvider<>()
+//    
+//    
+//}

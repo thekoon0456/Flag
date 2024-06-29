@@ -15,7 +15,6 @@
 		7C0ACC512C0DE9F800A85C6B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7C0ACC502C0DE9F800A85C6B /* Moya */; };
 		7C0ACC542C0DEA0B00A85C6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7C0ACC532C0DEA0B00A85C6B /* Kingfisher */; };
 		7C0ACC622C0DEB1800A85C6B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC612C0DEB1800A85C6B /* APIService.swift */; };
-		7C0ACC642C0DEB1F00A85C6B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC632C0DEB1F00A85C6B /* Router.swift */; };
 		7C0ACC682C0DEBB800A85C6B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ACC672C0DEBB800A85C6B /* .gitignore */; };
 		7C0ACC6A2C0DEBC500A85C6B /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC692C0DEBC500A85C6B /* APIKey.swift */; };
 		7C0ACC6D2C0DF6F200A85C6B /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC6C2C0DF6F200A85C6B /* NavigationLazyView.swift */; };
@@ -23,6 +22,8 @@
 		7C0ACC722C0DF83900A85C6B /* ButtonWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC712C0DF83900A85C6B /* ButtonWrapper.swift */; };
 		7C0ACC742C0DF85200A85C6B /* ForegroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */; };
 		7C0ACC762C0DF86D00A85C6B /* BackgroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */; };
+		7C0ACC7C2C0DF9FD00A85C6B /* UserJoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC7B2C0DF9FD00A85C6B /* UserJoinRequest.swift */; };
+		7C1D2EDB2C2FFDFB0067CCBE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7C1D2EDA2C2FFDFB0067CCBE /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,6 @@
 		7C0ACC432C0DD84A00A85C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C0ACC462C0DD84A00A85C6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C0ACC612C0DEB1800A85C6B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		7C0ACC632C0DEB1F00A85C6B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7C0ACC672C0DEBB800A85C6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7C0ACC692C0DEBC500A85C6B /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		7C0ACC6B2C0DF68C00A85C6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +41,7 @@
 		7C0ACC712C0DF83900A85C6B /* ButtonWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWrapper.swift; sourceTree = "<group>"; };
 		7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundWrapper.swift; sourceTree = "<group>"; };
 		7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWrapper.swift; sourceTree = "<group>"; };
+		7C0ACC7B2C0DF9FD00A85C6B /* UserJoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 			files = (
 				7C0ACC542C0DEA0B00A85C6B /* Kingfisher in Frameworks */,
 				7C0ACC512C0DE9F800A85C6B /* Moya in Frameworks */,
+				7C1D2EDB2C2FFDFB0067CCBE /* ComposableArchitecture in Frameworks */,
 				7C0ACC4F2C0DE9F800A85C6B /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,7 +136,8 @@
 		7C0ACC592C0DEA4600A85C6B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7C0ACC5C2C0DEA6900A85C6B /* DTO */,
+				7C0ACC782C0DF9DF00A85C6B /* Request */,
+				7C0ACC792C0DF9E200A85C6B /* Response */,
 				7C0ACC5D2C0DEA6F00A85C6B /* Network */,
 			);
 			path = Data;
@@ -157,18 +160,10 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		7C0ACC5C2C0DEA6900A85C6B /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
 		7C0ACC5D2C0DEA6F00A85C6B /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				7C0ACC612C0DEB1800A85C6B /* APIService.swift */,
-				7C0ACC632C0DEB1F00A85C6B /* Router.swift */,
 				7C0ACC692C0DEBC500A85C6B /* APIKey.swift */,
 			);
 			path = Network;
@@ -214,6 +209,29 @@
 			path = CommonUI;
 			sourceTree = "<group>";
 		};
+		7C0ACC782C0DF9DF00A85C6B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ACC7A2C0DF9EF00A85C6B /* User */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		7C0ACC792C0DF9E200A85C6B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		7C0ACC7A2C0DF9EF00A85C6B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ACC7B2C0DF9FD00A85C6B /* UserJoinRequest.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +252,7 @@
 				7C0ACC4E2C0DE9F800A85C6B /* CombineMoya */,
 				7C0ACC502C0DE9F800A85C6B /* Moya */,
 				7C0ACC532C0DEA0B00A85C6B /* Kingfisher */,
+				7C1D2EDA2C2FFDFB0067CCBE /* ComposableArchitecture */,
 			);
 			productName = Flag;
 			productReference = 7C0ACC3C2C0DD84900A85C6B /* Flag.app */;
@@ -266,6 +285,7 @@
 			packageReferences = (
 				7C0ACC4D2C0DE9F800A85C6B /* XCRemoteSwiftPackageReference "Moya" */,
 				7C0ACC522C0DEA0B00A85C6B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7C1D2ED92C2FFDFB0067CCBE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 7C0ACC3D2C0DD84900A85C6B /* Products */;
 			projectDirPath = "";
@@ -294,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C0ACC642C0DEB1F00A85C6B /* Router.swift in Sources */,
 				7C0ACC422C0DD84900A85C6B /* ContentView.swift in Sources */,
 				7C0ACC742C0DF85200A85C6B /* ForegroundWrapper.swift in Sources */,
 				7C0ACC702C0DF82200A85C6B /* NavigationBarWrapper.swift in Sources */,
@@ -302,6 +321,7 @@
 				7C0ACC6D2C0DF6F200A85C6B /* NavigationLazyView.swift in Sources */,
 				7C0ACC622C0DEB1800A85C6B /* APIService.swift in Sources */,
 				7C0ACC402C0DD84900A85C6B /* FlagApp.swift in Sources */,
+				7C0ACC7C2C0DF9FD00A85C6B /* UserJoinRequest.swift in Sources */,
 				7C0ACC6A2C0DEBC500A85C6B /* APIKey.swift in Sources */,
 				7C0ACC762C0DF86D00A85C6B /* BackgroundWrapper.swift in Sources */,
 			);
@@ -362,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -419,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -543,6 +563,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		7C1D2ED92C2FFDFB0067CCBE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -560,6 +588,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7C0ACC522C0DEA0B00A85C6B /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		7C1D2EDA2C2FFDFB0067CCBE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C1D2ED92C2FFDFB0067CCBE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
