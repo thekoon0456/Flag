@@ -45,7 +45,9 @@ struct CounterView: View {
 }
 
 #Preview {
-    CounterView(store: Store(initialState: CounterFeature.State()) { /*CounterFeature()*/ //로직 상관없이 View 먼저 그리기 가능
-    }
+    CounterView(
+        store: Store(initialState: CounterFeature.State()) {
+//            CounterFeature() //로직 상관없이 View 먼저 그리기 가능
+        }
     )
 }

@@ -10,10 +10,16 @@ import SwiftUI
 
 @main
 struct FlagApp: App {
+    
+    static let store = Store(initialState: CounterFeature.State()) {
+        CounterFeature()
+            ._printChanges() //상태변화 프린트
+    }
+    
     var body: some Scene {
         WindowGroup {
-            CounterView(store: Store(initialState: CounterFeature.State()) { CounterFeature()
-            }
+            CounterView(
+                store: FlagApp.store
             )
         }
     }
