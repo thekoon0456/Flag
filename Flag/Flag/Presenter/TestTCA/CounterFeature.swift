@@ -14,6 +14,7 @@ struct CounterFeature {
         var count = 0
         var fact: String?
         var isLoading = false
+        var isTimerRunning = false
     }
     
     enum Action {
@@ -22,7 +23,11 @@ struct CounterFeature {
         case resetButtonTapped
         case factButtonTapped
         case factResponse(fact: String)
+        case toggleTimerButtonTapped
+        case timerTick
     }
+    
+    enum CancelID { case timer }
     
     var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -54,9 +59,26 @@ struct CounterFeature {
                     await send(.factResponse(fact: fact)) //send: mainActor
                 }
                 
-            case .factResponse(let fact):
+            case let .factResponse(fact):
                 state.isLoading = false
                 state.fact = fact
+                return .none
+            case .toggleTimerButtonTapped:
+                state.isTimerRunning.toggle()
+                if state.isTimerRunning {
+                    return .run { send in
+                        while true {
+                            try await Task.sleep(for: .seconds(1))
+                            await send(.timerTick)
+                        }
+                    }
+                    .cancellable(id: CancelID.timer) //새 작업을 시작하기 전에 기존 작업 있으면 취소하고 시작 //debounce
+                } else {
+                    return .cancel(id: CancelID.timer) //작업 취소
+                }
+            case .timerTick:
+                state.count += 1
+                state.fact = nil
                 return .none
             }
         }

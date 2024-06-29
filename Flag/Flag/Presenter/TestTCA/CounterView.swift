@@ -40,6 +40,14 @@ struct CounterView: View {
                 .background(Color.black.opacity(0.1))
                 .presentationCornerRadius(10)
                 
+                Button(viewStore.isTimerRunning ? "stop timer" : "start timer") {
+                    viewStore.send(.toggleTimerButtonTapped)
+                }
+                .font(.largeTitle)
+                .padding()
+                .background(Color.black.opacity(0.1))
+                .presentationCornerRadius(10)
+                
                 Button("Fact") {
                     viewStore.send(.factButtonTapped)
                 }
