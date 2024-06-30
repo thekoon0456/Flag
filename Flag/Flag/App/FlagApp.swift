@@ -18,9 +18,11 @@ struct FlagApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CounterView(
-                store: FlagApp.store
-            )
+//            CounterView(
+//                store: FlagApp.store
+//            )
+            
+            AppView(store1: FlagApp.store, store2: FlagApp.store)
         }
     }
 }

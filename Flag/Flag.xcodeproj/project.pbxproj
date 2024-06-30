@@ -29,6 +29,7 @@
 		7C1D2EF42C3069AD0067CCBE /* FlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D2EF32C3069AD0067CCBE /* FlagTests.swift */; };
 		7C1D2EFD2C3069D20067CCBE /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D2EEB2C3069560067CCBE /* CounterFeatureTests.swift */; };
 		7C1D2EFF2C3072D60067CCBE /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D2EFE2C3072D60067CCBE /* NumberFactClient.swift */; };
+		7C7FC72B2C31916000A8FFE9 /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC72A2C31915F00A8FFE9 /* AppFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7C1D2EF12C3069AD0067CCBE /* FlagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1D2EF32C3069AD0067CCBE /* FlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagTests.swift; sourceTree = "<group>"; };
 		7C1D2EFE2C3072D60067CCBE /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
+		7C7FC72A2C31915F00A8FFE9 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 			children = (
 				7C1D2EDD2C2FFE660067CCBE /* CounterView.swift */,
 				7C1D2EE52C3000A50067CCBE /* CounterFeature.swift */,
+				7C7FC72A2C31915F00A8FFE9 /* AppFeature.swift */,
 			);
 			path = TestTCA;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				7C0ACC7C2C0DF9FD00A85C6B /* UserJoinRequest.swift in Sources */,
 				7C0ACC6A2C0DEBC500A85C6B /* APIKey.swift in Sources */,
 				7C1D2EFF2C3072D60067CCBE /* NumberFactClient.swift in Sources */,
+				7C7FC72B2C31916000A8FFE9 /* AppFeature.swift in Sources */,
 				7C0ACC762C0DF86D00A85C6B /* BackgroundWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
