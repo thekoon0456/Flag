@@ -35,6 +35,7 @@
 		7C7FC7312C32A4A200A8FFE9 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC7302C32A4A200A8FFE9 /* ContactsView.swift */; };
 		7C7FC7332C32A6AB00A8FFE9 /* AddContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC7322C32A6AB00A8FFE9 /* AddContactsFeature.swift */; };
 		7C7FC7352C32A7CD00A8FFE9 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC7342C32A7CD00A8FFE9 /* AddContactView.swift */; };
+		7C7FC7372C330CDE00A8FFE9 /* ContactsFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FC7362C330CDE00A8FFE9 /* ContactsFeatureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		7C7FC7302C32A4A200A8FFE9 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		7C7FC7322C32A6AB00A8FFE9 /* AddContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsFeature.swift; sourceTree = "<group>"; };
 		7C7FC7342C32A7CD00A8FFE9 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		7C7FC7362C330CDE00A8FFE9 /* ContactsFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +299,7 @@
 				7C1D2EF32C3069AD0067CCBE /* FlagTests.swift */,
 				7C1D2EEB2C3069560067CCBE /* CounterFeatureTests.swift */,
 				7C7FC72C2C31952D00A8FFE9 /* AppFeatureTests.swift */,
+				7C7FC7362C330CDE00A8FFE9 /* ContactsFeatureTests.swift */,
 			);
 			path = FlagTests;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				7C1D2EF42C3069AD0067CCBE /* FlagTests.swift in Sources */,
 				7C1D2EFD2C3069D20067CCBE /* CounterFeatureTests.swift in Sources */,
 				7C7FC72D2C31952D00A8FFE9 /* AppFeatureTests.swift in Sources */,
+				7C7FC7372C330CDE00A8FFE9 /* ContactsFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
