@@ -33,20 +33,27 @@ struct ContactsFeature {
                     contact: Contact(id: UUID(), name: "")
                 )
                 return .none
+                
             //PresentationAction
-            case .addContact(.presented(.cancelButtonTapped)):
-                state.addContact = nil
-                return .none
-            case .addContact(.presented(.saveButtonTapped)):
-                guard let contact = state.addContact?.contact
-                else { return .none }
+//            case .addContact(.presented(.delegate(.cancel))):
+//                state.addContact = nil
+//                return .none
+                
+            case let .addContact(.presented(.delegate(.saveContact(contact)))):
+//                guard let contact = state.addContact?.contact
+//                else { return .none }
                 state.contacts.append(contact)
-                state.addContact = nil
+//                state.addContact = nil
                 return .none
-            case let .addContact(.presented(.setName(name))):
+                
+            case .addContact:
                 return .none
-            case .addContact(.dismiss): //dismiss Case까지
-                return .none
+                
+//            case let .addContact(.presented(.setName(name))):
+//                return .none
+//                
+//            case .addContact(.dismiss): //dismiss Case까지
+//                return .none
             }
         }
         .ifLet(\.$addContact, action: \.addContact) { //PresentationState 있을때만 실행됨
