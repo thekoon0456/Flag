@@ -21,7 +21,7 @@ struct ContactsFeature {
         @PresentationState var destination: Destination.State?
     }
     
-    enum Action {
+    enum Action: Equatable {
         case addButtonTapped
         case deleteButtonTapped(id: Contact.ID)
         case destination(PresentationAction<Destination.Action>)
@@ -30,7 +30,9 @@ struct ContactsFeature {
             case confirmDeletion(id: Contact.ID)
         }
     }
+    
     @Dependency(\.uuid) var uuid
+    
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action { //항상 실행됨
@@ -80,7 +82,7 @@ extension ContactsFeature {
             case alert(AlertState<ContactsFeature.Action.Alert>)
         }
         
-        enum Action {
+        enum Action: Equatable {
             case addContact(AddContactFeature.Action)
             case alert(ContactsFeature.Action.Alert)
         }
