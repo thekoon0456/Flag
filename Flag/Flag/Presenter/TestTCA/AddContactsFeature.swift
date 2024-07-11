@@ -19,7 +19,8 @@ struct AddContactFeature {
         case delegate(Delegate)
         case saveButtonTapped
         case setName(String)
-
+        //data Upstream, delegate로 전달
+        //reducer에서는 .none, 상위 기능에서 로직 처리
         enum Delegate: Equatable {
 //            case cancel
             case saveContact(Contact)
@@ -32,7 +33,7 @@ struct AddContactFeature {
         Reduce { state, action in
             switch action {
             case .cancelButtonTapped:
-//                return .send(.delegate(.cancel))
+//                return .send(.delegate(.cancel)) //sideEffect, delegate를 통해
                 return .run { _ in 
                     await self.dismiss()
                 }

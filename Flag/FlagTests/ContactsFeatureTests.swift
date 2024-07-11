@@ -40,4 +40,20 @@ final class ContactsFeatureTests: XCTestCase {
             $0.destination = nil
         }
     }
+    
+    func testAddFlow() async {
+        let store = TestStore(initialState: ContactsFeature.State()) {
+            ContactsFeature()
+        } withDependencies: {
+            $0.uuid = .incrementing //uuid 제너레이터
+        }
+        
+        await store.send(.addButtonTapped) {
+            $0.destination = .addContact(
+                AddContactFeature.State(
+                    contact: Contact(id: UUID(0), name: "name")
+                )
+            ) //UUID 종속성 호출
+        }
+    }
 }

@@ -30,7 +30,7 @@ struct ContactsFeature {
             case confirmDeletion(id: Contact.ID)
         }
     }
-    
+    @Dependency(\.uuid) var uuid
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action { //항상 실행됨
