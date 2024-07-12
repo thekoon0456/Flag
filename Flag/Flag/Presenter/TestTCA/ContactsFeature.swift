@@ -16,15 +16,17 @@ struct Contact: Equatable, Identifiable {
 @Reducer
 struct ContactsFeature {
     struct State: Equatable {
-        var contacts: IdentifiedArrayOf<Contact> = []
         //Destination으로 통합
         @PresentationState var destination: Destination.State?
+        var contacts: IdentifiedArrayOf<Contact> = []
+        var path = StackState<ContactDetailFeature.State>()
     }
     
     enum Action: Equatable {
         case addButtonTapped
         case deleteButtonTapped(id: Contact.ID)
         case destination(PresentationAction<Destination.Action>)
+        case path(StackAction<ContactDetailFeature.State, ContactDetailFeature.Action>)
         
         enum Alert: Equatable {
             case confirmDeletion(id: Contact.ID)
@@ -55,6 +57,9 @@ struct ContactsFeature {
             case .destination:
                 return .none
                 
+            case .path:
+                return .none
+                
             case let .deleteButtonTapped(id: id):
                 state.destination = .alert(
                     AlertState {
@@ -70,6 +75,9 @@ struct ContactsFeature {
         }
         .ifLet(\.$destination, action: \.destination) { //PresentationState 있을때만 실행됨
             Destination()
+        }
+        .forEach(\.path, action: \.path) { //목록 각각 연락처 기능 Feature 추가
+            ContactDetailFeature()
         }
     }
 }

@@ -16,7 +16,7 @@ final class CounterFeatureTests: XCTestCase {
             CounterFeature()
         }
         
-//        store.exhaustivity = .off
+        store.exhaustivity = .off
         
         await store.send(.incrementButtonTapped) {
             $0.count = 1

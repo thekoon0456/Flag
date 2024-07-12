@@ -23,6 +23,8 @@
 		7C0ACC742C0DF85200A85C6B /* ForegroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */; };
 		7C0ACC762C0DF86D00A85C6B /* BackgroundWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */; };
 		7C0ACC7C2C0DF9FD00A85C6B /* UserJoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ACC7B2C0DF9FD00A85C6B /* UserJoinRequest.swift */; };
+		7C1420032C410EEF0014649D /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1420022C410EEF0014649D /* ContactDetailFeature.swift */; };
+		7C1420052C410F5D0014649D /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1420042C410F5D0014649D /* ContactDetailView.swift */; };
 		7C1D2EDE2C2FFE660067CCBE /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D2EDD2C2FFE660067CCBE /* CounterView.swift */; };
 		7C1D2EE62C3000A50067CCBE /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D2EE52C3000A50067CCBE /* CounterFeature.swift */; };
 		7C1D2EE92C3001DD0067CCBE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7C1D2EE82C3001DD0067CCBE /* ComposableArchitecture */; };
@@ -64,6 +66,8 @@
 		7C0ACC732C0DF85200A85C6B /* ForegroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundWrapper.swift; sourceTree = "<group>"; };
 		7C0ACC752C0DF86D00A85C6B /* BackgroundWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWrapper.swift; sourceTree = "<group>"; };
 		7C0ACC7B2C0DF9FD00A85C6B /* UserJoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinRequest.swift; sourceTree = "<group>"; };
+		7C1420022C410EEF0014649D /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
+		7C1420042C410F5D0014649D /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		7C1D2EDD2C2FFE660067CCBE /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		7C1D2EE52C3000A50067CCBE /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		7C1D2EEB2C3069560067CCBE /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				7C7FC72E2C32A38D00A8FFE9 /* ContactsFeature.swift */,
 				7C7FC7342C32A7CD00A8FFE9 /* AddContactView.swift */,
 				7C7FC7322C32A6AB00A8FFE9 /* AddContactsFeature.swift */,
+				7C1420022C410EEF0014649D /* ContactDetailFeature.swift */,
+				7C1420042C410F5D0014649D /* ContactDetailView.swift */,
 			);
 			path = TestTCA;
 			sourceTree = "<group>";
@@ -427,7 +433,9 @@
 			files = (
 				7C0ACC422C0DD84900A85C6B /* ContentView.swift in Sources */,
 				7C0ACC742C0DF85200A85C6B /* ForegroundWrapper.swift in Sources */,
+				7C1420032C410EEF0014649D /* ContactDetailFeature.swift in Sources */,
 				7C7FC7332C32A6AB00A8FFE9 /* AddContactsFeature.swift in Sources */,
+				7C1420052C410F5D0014649D /* ContactDetailView.swift in Sources */,
 				7C0ACC702C0DF82200A85C6B /* NavigationBarWrapper.swift in Sources */,
 				7C1D2EE62C3000A50067CCBE /* CounterFeature.swift in Sources */,
 				7C0ACC722C0DF83900A85C6B /* ButtonWrapper.swift in Sources */,
